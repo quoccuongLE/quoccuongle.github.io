@@ -1,27 +1,9 @@
-<h2 {% if site.style == 'dark' %}class="text-white"{% endif %}>Wellcome to my personal page!</h2>
-<p class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">I am a research engineer in Machine Learning & Computer Vision. I obtained my engineering degree from the Institut National des Sciences Appliquées de Centre Val de Loire (Blois, France) in 2016, later I started my Ph.D. in Computer Vision and Machine Learning at Université de Tours (Tours, France). The topic of my thesis was to develop a collaborative multi-camera tracking system, which was part of a research project, named LUMINEUX - or 'luminous' in English, aiming to create a smart city with a system of intelligent sensors for smart street lighting, traffic control, etc. After finished my PhD in 2020. I joined a start-up, named XXII Group, based at Puteaux (next to Paris), France to develop a SmartCity platform, which analyses camera videos in real-time. The system are deployed in multiple cites across France, Spain and the US. </p>
-<!-- <div class="d-sm-flex flex-wrap gutter-condensed mb-4">
-  {% if site.projects.sort_by == 'stars' %}
-    {% assign sort_order = 'stargazers_count', 'last' %}
-  {% else %}
-    {% assign sort_order = 'pushed_at' %}
-  {% endif %}
+<h2 {% if site.style=='dark' %}class="text-white" {% endif %}>My research projects</h2>
+<ul style="padding-left:20px" class="f4 mb-4 {% if site.style == 'dark' %}text-white{% else %}text-gray{% endif %}">
+  <li>Real-time Multiple Object Tracking in multiple camera systems</li>
+  <li>Scalable vehicle/person Re-Identification systems</li>
+  <li>Out-of-Distribution and Distribution Shift problems in Machine Learning and Computer Vision (e.g. object detection,
+  segmentation)</li>
+  <li>Develop real-time Open-Vocabulary/ Zero/One/Few-shot Object Detection model (named YOLO-CLIP) based on vision-Language Pretrained models, e.g. <a href="https://openai.com/research/clip">CLIP (OpenAI)</a>, <a href="https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model">Flamingo (Deepmind)</a>, <a href="https://www.microsoft.com/en-us/research/project/project-florence-vl/articles/object-detection-in-the-wild-via-grounded-language-image-pre-training/">GLIP (Microsoft)</a></li>
 
-  {% if site.projects.exclude.archived && site.projects.exclude.forks %}
-    {% assign filtered_repos = site.github.public_repositories | where:'archived', false | where:'fork', false | sort: sort_order | reverse %}
-  {% elsif site.projects.exclude.archived %}
-    {% assign filtered_repos = site.github.public_repositories | where:'archived', false | sort: sort_order | reverse %}
-  {% elsif site.projects.exclude.forks %}
-    {% assign filtered_repos = site.github.public_repositories | where:'fork', false | sort: sort_order | reverse %}
-  {% else %}
-    {% assign filtered_repos = site.github.public_repositories | sort: sort_order | reverse %}
-  {% endif %}
-
-  {% for repository in filtered_repos | limit: site.projects.limit %}
-    {% unless site.projects.exclude.projects contains repository.name %}
-      <div class="col-sm-6 col-md-12 col-lg-6 col-xl-4 mb-3">
-        {% include repo-card.html %}
-      </div>
-    {% endunless %}
-  {% endfor %}
-</div> -->
+</ul>
