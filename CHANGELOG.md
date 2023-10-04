@@ -11,3 +11,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - My bio
 - My research projects
 - My publications
+- My PhD thesis
